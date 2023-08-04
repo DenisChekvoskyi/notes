@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>to do list</title>
+    
+    <script type="module" crossorigin src="/assets/index-541928e8.js"></script>
+    <link rel="stylesheet" href="/assets/index-414f1078.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <ul class="menu">
+          <li>Name</li>
+          <li>Created</li>
+          <li>Category</li>
+          <li>Content</li>
+          <li>Dates</li>
+        </ul>
+        <div class="nav">
+          <ul>
+            <li><img id="archiveAll" src="icons/foldergreydownload.svg" alt="All archive" /></li>
+            <li><img id="deleteAll" src="icons/full_trash.png" alt="All delete" /></li>
+          </ul>
+        </div>
+      </div>
+      <div class="task"></div>
+      <button class="createNote">Create Note</button>
+      <div class="header footer">
+        <ul class="menu">
+          <li>Note Category</li>
+          <li>Active</li>
+          <li>Archived</li>
+        </ul>
+      </div>
+      <div class="taskBrief"></div>
+    </div>
+
+    <div class="dialogOverlay">
+      <div class="dialogBox">
+        <img class="closeDialogButton" src="icons/close.svg" alt="close" />
+        <h2>Fill in the information</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" required />
+
+          <label for="category">Category:</label>
+          <select id="category" required>
+            <option value="Task">Task</option>
+            <option value="Random Thought">Random Thought</option>
+            <option value="Idea">Idea</option>
+          </select>
+
+          <label for="text">Content:</label>
+          <textarea id="text" rows="4" required></textarea>
+
+          <button type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="archivingOverlay">
+      <div class="archivingBox">
+        <img class="closeDialogButton" src="icons/close.svg" alt="close" />
+        <div class="archive"></div>
+      </div>
+    </div>
+
+    <div class="taskViewOverlay">
+      <div class="taskView">
+        <img class="closeDialogButton" src="icons/close.svg" alt="close" />
+        <div class="taskViewContainer"></div>
+      </div>
+    </div>
+
+    
+  </body>
+</html>
