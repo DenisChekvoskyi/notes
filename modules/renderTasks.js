@@ -1,4 +1,5 @@
 import tasks from "../db";
+import formatDate from "./formatDate";
 
 function renderTasks() {
   const taskContainer = document.querySelector(".task");
@@ -23,7 +24,7 @@ function renderTasks() {
     taskInfo.innerHTML = `
           <img class="task-img" src=${task.imgSrc} alt=${task.imgAlt} />
           <div data-index=${index} class="task-name">${shortTaskName}</div>
-          <div class="task-created">${task.taskCreated}</div>
+          <div class="task-created">${formatDate(task.taskCreated)}</div>
           <div class="task-category">${task.taskCategory}</div>
           <div data-index=${index} class="task-content">${shortTaskContent}</div>
           <div class="tast-dates">${shortTaskDates}</div>
