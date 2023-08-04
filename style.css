@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  margin: 50px auto;
+  max-width: 992px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  background-color: rgb(181, 178, 178);
+  border-radius: 5px;
+}
+.header ul li img {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.2s ease;
+}
+
+.header ul li img:hover {
+  transform: scale(1.2);
+}
+
+.header ul {
+  display: flex;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  list-style-type: none;
+}
+
+.menu {
+  margin: 0 40px 0 50px;
+  min-width: 810px;
+}
+
+.menu li {
+  width: 162px;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+}
+
+.nav {
+  margin-right: 10px;
+}
+
+.task-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.task-nav img {
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.task-nav img:hover {
+  transform: scale(1.2);
+}
+
+.createNote {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 5px 10px;
+  margin-left: auto;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.footer {
+  margin-top: 50px;
+}
+
+.task-info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  height: 60px;
+  background-color: rgb(232, 232, 232);
+  border-radius: 5px;
+  margin: 10px 0 10px 0;
+}
+
+.task-name,
+.task-content {
+  padding: 15px 0 15px 0;
+  cursor: pointer;
+}
+
+.viev {
+  margin: 10px;
+}
+
+.task-img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 10px;
+}
+
+.task-info div {
+  width: 162px;
+  font-size: 16px;
+  color: gray;
+}
+
+.task-info div:last-child {
+  width: auto;
+  margin-right: 10px;
+}
+
+.task-info .task-name {
+  color: black;
+}
+
+.taskViewOverlay,
+.archivingOverlay,
+.dialogOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+}
+
+.taskView,
+.archivingBox,
+.dialogBox {
+  min-width: 320px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.taskView,
+.archivingBox {
+  min-width: 640px;
+  max-width: 922px;
+  max-height: 80%;
+  overflow: auto;
+}
+
+.closeDialogButton {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.dialogBox form {
+  display: flex;
+  flex-direction: column;
+}
+
+.dialogBox label {
+  margin-top: 10px;
+}
+
+.dialogBox input,
+.dialogBox select,
+.dialogBox textarea {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.dialogBox button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: rgb(198, 226, 198);
+}
